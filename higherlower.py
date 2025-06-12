@@ -2,9 +2,9 @@ import random
 from game_data import data
 
 def pick_next_account(account_a):
-    account_B = random.randint(0, len(data) - 1)
+    account_B = random.choice(data)
     while account_B == account_a:
-        account_B = random.randint(0, len(data) - 1)
+        account_B = random.choice(data)
     return account_B
 
 def make_choice(account_a, account_b):
@@ -17,7 +17,7 @@ def make_choice(account_a, account_b):
 
 def main():
     playing = True
-    account_a = random.randint(0, len(data) - 1)
+    account_a = random.choice(data)
     score = 0
     #current choice (A)
     while playing:
