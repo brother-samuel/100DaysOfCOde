@@ -29,6 +29,8 @@ t.colormode(255)
 timmy.pensize(20)
 timmy.speed("fastest")
 timmy.seth(0)
+timmy.hideturtle()
+
 for _ in range(10):
     timmy.setpos(-220, y_start)
     for _ in range(10):
