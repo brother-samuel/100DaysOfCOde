@@ -24,7 +24,7 @@ while quiz_on:
     answer_state = screen.textinput(title=f"{score}/50 States Correct", prompt="Type in the name of a state:")
     # print(answer_state)
     if answer_state is None:
-        missed_states = list(set(states_list) - set(guessed_states))
+        missed_states = [state for state in states_list if state not in guessed_states]
         pandas.Series(missed_states).to_csv("missed_states.csv")
         quiz_on = False
         break
