@@ -1,13 +1,7 @@
 from turtle import Turtle, Screen
 
-timmy = Turtle()
-timmy.forward(100)
-timmy.left(90)
-timmy.forward(100)
-timmy.left(90)
-timmy.forward(100)
-timmy.left(90)
-timmy.forward(100)
+timmy_the_turtle = Turtle()
+
 
 
 screen = Screen()
