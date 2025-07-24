@@ -22,15 +22,21 @@
 
 # Create a dictionary in this format:
 # {"A": "Alfa", "B": "Bravo"}
+
 import pandas
 df = pandas.read_csv("nato_phonetic_alphabet.csv")
 dict = {row['letter']:row['code'] for (index,row) in df.iterrows()}
-# print(dict)
-# Create a list of the phonetic code words from a word that the user inputs.
 
 name = input("Enter a word: ").upper()
-spelling = []
-for letter in name:
-    if letter in dict:
-        spelling.append(dict[letter])
-print(spelling)
+# spelling = []
+# for letter in name:
+try:
+    spelling = [dict[letter] for letter in name]
+    # if letter in dict:
+    #     spelling.append(dict[letter])
+    # ANOTHER ALTERNATIVE METHOD:
+    # spelling - []
+    # spelling.append(dict[letter])
+    print(spelling)
+except KeyError:
+    print("Sorry, only enter characters from the alphabet")
